@@ -26,7 +26,7 @@ python tools/preflight.py
 已修正：
 
 - Compose 编辑弹窗缺少 `verticalScroll` 导入的问题。
-- GitHub Actions 改为安装 API 37 + Build Tools 36.0.0，并支持 Pull Request 构建。
+- GitHub Actions 改为安装 API 36 + Build Tools 36.0.0，并支持 Pull Request 构建。
 - DeepSeek 默认模型更新为 `deepseek-flash`，加入 JSON 最大输出长度和空结果错误提示。
 - Windows 一键构建会检测并尝试安装所需 Android SDK 组件。
 

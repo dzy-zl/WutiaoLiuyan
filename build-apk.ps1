@@ -37,7 +37,7 @@ if (-not $env:ANDROID_HOME -and -not $env:ANDROID_SDK_ROOT) {
 $sdkPath = if ($env:ANDROID_HOME) { $env:ANDROID_HOME } else { $env:ANDROID_SDK_ROOT }
 Write-Host "Android SDK: $sdkPath"
 
-$androidJar = Join-Path $sdkPath "platforms\android-37\android.jar"
+$androidJar = Join-Path $sdkPath "platforms\android-36\android.jar"
 $buildTools = Join-Path $sdkPath "build-tools\36.0.0"
 if (-not (Test-Path $androidJar) -or -not (Test-Path $buildTools)) {
     $sdkManagerCandidates = @(
@@ -47,10 +47,10 @@ if (-not (Test-Path $androidJar) -or -not (Test-Path $buildTools)) {
         Select-Object -ExpandProperty FullName
     $sdkManager = $sdkManagerCandidates | Where-Object { Test-Path $_ } | Select-Object -First 1
     if (-not $sdkManager) {
-        throw "缺少 Android SDK 37 或 Build Tools 36.0.0，且未找到 sdkmanager。请在 Android Studio > SDK Manager 中安装 Android 17 (API 37) 与 Android SDK Build-Tools 36.0.0。"
+        throw "缺少 Android SDK 36 或 Build Tools 36.0.0，且未找到 sdkmanager。请在 Android Studio > SDK Manager 中安装 Android 16 (API 36) 与 Android SDK Build-Tools 36.0.0。"
     }
     Write-Host "正在安装 Android SDK 37 与 Build Tools 36.0.0..." -ForegroundColor Yellow
-    & $sdkManager "platform-tools" "platforms;android-37" "build-tools;36.0.0"
+    & $sdkManager "platform-tools" "platforms;android-36" "build-tools;36.0.0"
     if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 }
 
