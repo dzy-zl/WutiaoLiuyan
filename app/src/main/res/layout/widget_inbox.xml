@@ -1,0 +1,4 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp" android:background="#111111">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="六眼收件箱" android:textStyle="bold" android:textSize="15sp" android:textColor="#FFFFFF" />
+    <TextView android:id="@+id/widget_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Inbox 0 · 今日 0" android:textSize="18sp" android:textColor="#FFFFFF" />
+</LinearLayout>

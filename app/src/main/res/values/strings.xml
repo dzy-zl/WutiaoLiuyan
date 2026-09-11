@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">五条六眼</string>
+    <string name="widget_today">五条六眼 · 今日任务</string>
+    <string name="widget_inbox">五条六眼 · Inbox</string>
+</resources>
